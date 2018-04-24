@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+
+<style>
+  .item {
+    border-radius: 5px;
+    color: #111;
+    cursor: default;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1em;
+    padding: 4px 14px;
+    position: relative;
+    width: 180px;
+  }
+
+  .item:hover {
+    background-color: #004cb3;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .item span {
+    margin-left: 1rem; padding: 0.2rem 0.4rem;
+
+    background-color: #111;
+    border-radius: 0.2rem;
+    color: #fcfcfc;
+    display: inline-block;
+    float: right;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+
+
+
+  .divider {
+    opacity: 0.2;
+    padding: 4px 14px;
+  }
+
+  .divider hr {
+    background-color: #111;
+    border: none;
+    color: #111;
+    height: 1px;
+  }
+</style>
+
+
+
+<div id="saveToPinboard" class="item">Save to Pinboard <span>Alt+P</span></div>
+<div id="saveToReadLater" class="item">Save to Read Later <span>Alt+R</span></div>
+<div class="divider"><hr/></div>
+<div id="unreadBookmarks" class="item">Unread bookmarks</div>
+<div id="allBookmarks" class="item">All bookmarks</div>
+
+
+
+<script src="./popup.js"></script>

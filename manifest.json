@@ -1,0 +1,51 @@
+{
+  "name": "Pinboard Button",
+  "description": "A minimal Firefox extension for Pinboard (https://pinboard.in) that does not use API keys, instead it opens Pinboard windows.",
+  "homepage_url": "https://git.inc.sh/NetOperatorWibby/firefox-pinboard-extension",
+  "manifest_version": 2,
+  "version" : "1.0.0",
+  "applications": {
+    "gecko": {
+      "id": "{eb059682-fdfe-4250-a2c2-7f7d1af4fe85}"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "https://pinboard.in/close"
+  ],
+  "background": {
+    "scripts": [
+      "pinboard.js",
+      "background.js"
+    ]
+  },
+  "commands": {
+    "save-to-pinboard": {
+      "suggested_key": { "default": "Alt+P" },
+      "description": "Save current page to Pinboard"
+    },
+    "save-to-read-later": {
+      "suggested_key": { "default": "Alt+R" },
+      "description": "Save current page to Pinboard's \"to read\" list"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["https://pinboard.in/close"],
+    "js": ["close.js"]
+  }],
+  "browser_action": {
+    "default_title": "Pinboard",
+    "default_popup": "popup.html",
+    "default_icon": "icon-dark.svg",
+    "theme_icons": [{
+      "light": "icon-light.svg",
+      "dark": "icon-dark.svg",
+      "size": 19
+    }]
+  },
+  "icons": {
+    "48": "icon-addon.png",
+    "128": "icon-addon.png"
+  }
+}
