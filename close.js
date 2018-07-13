@@ -1,3 +1,1 @@
-/* global browser */
-
-browser.runtime.sendMessage("close-this");
+/* global browser */ "use strict"; browser.runtime.sendMessage("close-this");

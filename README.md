@@ -1,6 +1,6 @@
 # Pinboard Button
 
-A very minimal Firefox extension for [Pinboard](https://pinboard.in) that does not use API keys, instead it opens Pinboard windows.
+A very minimal Firefox extension for [Pinboard](https://pinboard.in) that does not use API keys. Instead, it opens Pinboard windows.
 
 The Pinboard Button opens a small menu that let's you:
 
